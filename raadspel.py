@@ -11,7 +11,7 @@ def start_spel():
         try:
             gok = int(input(f'Poging {poging}: Raad het getal: '))
         except:
-            print("Ongeldige invoer, voer een getal in.")
+            print('Ongeldige invoer, voer een getal in!')
             continue
 
         if gok == getal:
