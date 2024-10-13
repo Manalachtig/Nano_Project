@@ -13,9 +13,9 @@ def play():
     naam = input("Voer je naam in: ")
     woord = kies_woord() #een willekeurig woord wordt gekozen uit kies_woord functie
     woord_aanvullen = '_' * len(woord) #geeft een reeks underscores aan die even lang is als het woord
-    poging = 10 #speler krijgt 10 pogingen om het woord te raden
+    poging = 12 #speler krijgt 12 pogingen om het woord te raden
 
-    print(f"Hallo {naam}, je hebt 10 pogingen om het woord te raden\nSpel gaat nu van start!")
+    print(f"Hallo {naam}, je hebt 12 pogingen om het woord te raden\nSpel gaat nu van start!")
     print(woord_aanvullen)
     print("\n")
 
