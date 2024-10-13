@@ -21,12 +21,12 @@ def play():
 
     while poging > 0 and '_' in woord_aanvullen: #while loop blijft draaien zolang speler nog pogingen over heeft en het woord nog niet volledig is geraden
         gok = input("Raad een letter: ").lower()
+        poging -= 1 #elke keer als een letter wordt geraden, wordt het aantal pogingen met 1 verminderd
         if gok in woord:
             woord_aanvullen = ''.join([letter if letter == gok else wc for letter, wc in zip(woord, woord_aanvullen)]) #als de geraden letter in het woord zit, wordt woord_aanvullen bijgewerkt om de geraden letter op de juiste posities te tonen
             print(f"Goed gedaan, {gok} zit in het woord!")
         else:
-            poging -= 1 #als de geraden letter niet in het woord zit, wordt het aantal pogingen met 1 verminderd
-            print(f"{gok} zit niet in het woord.")
+            print(f"{gok} zit niet in het woord.") #Als de geraden letter niet in het woord zit
 
         print(woord_aanvullen) #de huidige van woorden_aanvullen wordt getoond
         print(f"Resterende pogingen: {poging}") #status van aantal pogingen wordt getoond
